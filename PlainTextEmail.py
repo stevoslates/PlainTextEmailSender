@@ -20,7 +20,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:  #usin
    
    while allowed == False:
         try:
-            server.login("stevenslater0@gmail.com", password)
+            server.login("sender@gmail.com", password)
             server.sendmail(sender_email, receiver_email, message)
             allowed = True
             print("Message Sent!")
@@ -28,8 +28,6 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:  #usin
             print("Incorrect Password")
             password = input("Type your password and press enter: ")
         
-    
-#Make more advanced.. html? attatchments
     
     
 
